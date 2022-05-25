@@ -1,3 +1,31 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* GLOBAL STYLES */
 *,
 *::after,
 *::before {
@@ -9,25 +37,84 @@ html {
   box-sizing: border-box;
 }
 body {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   background-color: #fff;
-  color: #000;
+  color: #222;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
   font-family: Arial, sans-serif;
 }
 img {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
-.main-content {
-  flex-grow: 1;
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  background: orange;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 4px;
 }
+
+/* CONTAINER */
 .container {
-  min-width: 1240px;
   width: 100%;
-  margin-right: auto;
+  max-width: 1440px;
+  padding-left: 170px;
+  padding-right: 170px;
   margin-left: auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-right: auto;
+}
+.site-header {
+  border-top: 5px solid orange;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  margin-right: auto;
+}
+.logo-img {
+  display: flex;
+  width: 227px;
+  height: 59px;
+}
+.saytnav {
+  margin-right: 32px;
+  font-family: "Roboto", "Arial", serif;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 13px;
+}
+.saytnav-list {
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  /* display: inline-block; */
+}
+.saytnav-item:not(:last-child) {
+  margin-right: 32px;
+}
+.sitenav-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #222;
 }
